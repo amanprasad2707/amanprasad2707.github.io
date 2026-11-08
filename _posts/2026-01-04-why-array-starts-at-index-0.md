@@ -1,6 +1,6 @@
 ---
 title: 'Blog Post number 3'
-date: 2014-08-14
+date: 2026-01-04
 permalink: /posts/2026-01-04-why-array-starts-at-index-0/
 tags:
   - programming

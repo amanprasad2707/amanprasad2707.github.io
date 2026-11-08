@@ -1,7 +1,7 @@
 ---
 title: 'Decoding Exception Entry & Exit on ARM Cortex-Mx'
 date: 2025-12-27
-permalink: /posts/2012-08-14-decoding-exception-entry-exit-on-arm-cortex-mx/
+permalink: /posts/2025-12-27-decoding-exception-entry-exit-on-arm-cortex-mx/
 tags:
   - ARM Cortex-Mx
   - Microcontrollers
