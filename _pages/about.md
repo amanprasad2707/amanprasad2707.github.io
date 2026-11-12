@@ -9,146 +9,93 @@ redirect_from:
 
 
 
-I am an Electronics and Communication Engineering (ECE) student at **Panipat Institute of Engineering and Technology (PIET)**, with a strong interest in Embedded Systems, Firmware Development, and the Internet of Things (IoT).
+I am an Embedded Systems Developer at **Zaptics Research** with a background in Electronics and Communication Engineering from Panipat Institute of Engineering and Technology (PIET). I have a strong interest in Embedded Systems, Firmware Development, and the Internet of Things (IoT).
 
 I enjoy working close to the hardware, understanding how electronic components communicate with microcontrollers, and writing firmware that makes hardware perform useful tasks.
 
-For me, embedded engineering is not just about writing code. It is about understanding the complete system — from hardware connections and communication protocols to firmware architecture, debugging, and real-world performance.
+For me, embedded engineering is not just about writing code. It is about understanding the complete system from hardware connections and communication protocols to firmware architecture, and debugging.
 
 I use this website to document my engineering journey, share what I learn, showcase my projects, and write about the technical challenges I encounter along the way.
 
 ## My Interest in Embedded Systems
 
-My primary interest is in developing firmware for microcontroller-based systems. I enjoy exploring how microcontrollers interact with sensors, communication interfaces, memory, and other hardware components.
+I have always been curious about how hardware and software work together. What interests me most about embedded systems is the ability to write software that interacts directly with physical hardware and controls how a device behaves.
 
-Some of the areas I am particularly interested in include:
+I enjoy exploring microcontrollers, understanding how different components communicate, and learning what happens behind the scenes when firmware interacts with hardware. I am also interested in how embedded software is designed, debugged, and improved to make systems more reliable and efficient.
 
-- **Firmware Development:** Writing efficient and maintainable firmware using C and C++.
-- **Microcontrollers:** Working with ESP32, STM32, and AVR-based microcontrollers.
-- **Real-Time Operating Systems:** Understanding task scheduling, multitasking, synchronization, and resource management using FreeRTOS and Zephyr RTOS.
-- **Communication Protocols:** Working with UART, SPI, I2C, CAN, BLE, and RS485.
-- **IoT Development:** Connecting embedded devices to cloud platforms using MQTT, HTTP, and other communication technologies.
-- **Automotive Embedded Systems:** Exploring CAN communication, automotive firmware architecture, and AUTOSAR.
-- **Firmware Security and OTA:** Understanding secure firmware updates, image verification, and device provisioning.
+My interests mainly revolve around:
 
-I am particularly interested in understanding how things work internally rather than simply using existing libraries and APIs.
+- **Firmware Development:** Developing embedded applications using C and C++.
+- **Microcontrollers:** Exploring microcontroller architectures, peripherals, and hardware interfaces.
+- **RTOS:** Understanding real-time systems, task management, and multitasking.
+- **Communication Protocols:** Learning how devices exchange data through different communication interfaces.
+- **IoT:** Exploring how embedded devices connect and interact with other systems over networks.
+- **System-Level Development:** Understanding the relationship between hardware, firmware, memory, and system architecture.
+
+I prefer understanding how things work internally rather than relying entirely on existing libraries and abstractions. I find the process of exploring datasheets, experimenting with hardware, debugging issues, and gradually understanding a system particularly interesting.
 
 ## Technologies and Tools I Work With
 
-Here are some of the technologies and tools I have explored through my projects and experiments.
+Technologies and tools I work with across embedded development, firmware projects, and hardware experimentation.
 
-### Programming Languages
+- **Programming:** C, C++, Python, JavaScript
+- **Microcontrollers:** STM32, Espressif MCUs, AVR
+- **Embedded Platforms:** ESP-IDF, STM32 HAL, Arduino, PlatformIO
+- **RTOS:** FreeRTOS, Zephyr (Learning)
+- **Communication:** UART, SPI, I2C, CAN, BLE, Wi-Fi, RS485, Modbus RTU, MQTT, HTTP
+- **Development Tools:** VS Code, STM32CubeIDE, Arduino IDE, Git, GitHub, Logic Analyzers, Debugging Tools
 
-- C
-- C++
-- Python
-- JavaScript
-
-### Microcontrollers and Platforms
-
-- ESP32 and ESP8266
-- STM32
-- AVR microcontrollers
-
-### Embedded Development
-
-- ESP-IDF
-- Arduino Framework
-- STM32 HAL
-- PlatformIO
-- FreeRTOS
-- Zephyr RTOS (learning)
-
-### Communication Protocols
-
-- UART
-- SPI
-- I2C
-- CAN
-- BLE
-- RS485
-- Modbus RTU
-- MQTT
-- HTTP
-
-### Development and Debugging Tools
-
-- Visual Studio Code
-- STM32CubeIDE
-- Arduino IDE
-- Git and GitHub
-- Serial debugging tools
-- Logic analyzers and hardware debugging tools
-
-I continuously explore new tools and technologies to improve my understanding of embedded software development.
+I continue to expand my knowledge through hands-on development, experimentation, and working with hardware.
 
 ## Projects and Practical Experience
 
 I believe practical implementation is one of the best ways to learn engineering. I try to apply the concepts I study by building systems, experimenting with hardware, and solving real technical problems.
-
 Some of the major areas I have worked on include:
 
-### 1. Three-Phase AC EV Charging System
+### 1. UART Bootloader and OTA Firmware Update System
+*STM32 | ARM Cortex-M | ESP32 | UART | C | GitHub Actions*
 
-Working on a three-phase AC electric vehicle charging system has given me exposure to embedded firmware development, communication protocols, and system integration.
+Developed a custom UART bootloader for STM32 that receives firmware updates from an ESP32, which downloads the latest firmware from GitHub Releases.
 
-Some of the areas involved include:
+- Designed Flash memory layout with separate bootloader and application sections.
+- Implemented Flash erase and programming operations for firmware updates.
+- Added CRC-based firmware integrity checks and application validity checks.
+- Handled application startup, including stack pointer setup, vector table relocation, and bootloader-to-application handover.
+- Integrated GitHub Actions CI/CD to automatically build and publish firmware releases on updates to the main branch.
 
-- Microcontroller-based firmware development.
-- OCPP communication and charger-backend integration.
-- Energy metering and monitoring.
-- Communication between different system components.
-- Firmware architecture and debugging.
+### 2. STM32F407 Preemptive Task Scheduler
+*Bare-Metal | ARM Cortex-M4 | C*
 
-This project has helped me understand how different hardware and software components work together in a larger embedded system.
+- Developed a preemptive task scheduler for STM32F407 using SysTick and PendSV exceptions for task scheduling and context switching.
+- Implemented Round-Robin and Priority-Based scheduling with custom Task Control Blocks (TCBs).
+- Implemented manual context switching by saving and restoring R4–R11 registers, with separate PSP and MSP stack management.
 
-### 2. Power Metering and Energy Monitoring
+### 3. STM32F407 Peripheral Drivers and Sensor Library
+*Bare-Metal | Register-Level Programming | C*
 
-I have worked with the ATM90E32 energy metering IC to understand and implement electrical parameter measurement.
+- Developed register-level GPIO, UART, SPI, and I²C drivers for STM32F407 using reference manuals and datasheets.
+- Implemented sensor drivers for DHT11, DS18B20, and DS3231 RTC.
+- Verified communication protocols, signal timing, and peripheral behavior using a logic analyzer.
 
-Some of the technical areas include:
+### 4. IoT-Based QR Payment System
+*STM32F407 | ESP32 | AWS IoT Core | MQTT | Razorpay | DynamoDB*
 
-- SPI communication with the metering IC.
-- Voltage, current, power, and energy measurement.
-- Current transformer (CT) calibration.
-- RS485 and Modbus communication.
-- MQTT-based telemetry publishing.
-- Offline telemetry buffering and memory management.
-
-This work has helped me understand hardware interfacing, data acquisition, communication, and reliable telemetry handling.
-
-### 3. ESP32 BLE Development
-
-I have also explored Bluetooth Low Energy development using the ESP32 and the NimBLE stack.
-
-My work includes:
-
-- Implementing BLE server functionality.
-- Creating GATT services and characteristics.
-- Managing BLE connections and advertising.
-- Handling notifications and device communication.
-- Integrating BLE functionality with an embedded application.
-
-This has helped me understand how embedded devices communicate wirelessly with mobile applications and other BLE clients.
-
-I continue to improve these projects and explore ways to make their firmware more reliable, efficient, and maintainable.
+- Developed an STM32-based QR payment system with ESP32 for Wi-Fi connectivity and AWS IoT Core integration.
+- Integrated Razorpay webhooks and DynamoDB to process payment events and publish transaction updates through MQTT.
+- Implemented QR code display on OLED and real-time payment status updates.
 
 ## What I Enjoy Learning
 
-Apart from working on projects, I enjoy understanding the fundamentals behind embedded systems.
+I enjoy exploring the internals of embedded systems and understanding how processors, memory, and firmware interact. Some of the topics I particularly focus on include:
 
-Some topics I spend time exploring include:
+- **ARM Cortex-M Architecture:** Processor modes, privilege levels, exception handling, and the reset sequence.
+- **Processor Internals:** AAPCS, register usage, stack frames, and exception entry and return (stacking and unstacking).
+- **Memory and Boot Process:** Memory organization, linker scripts, startup code, vector tables, and bootloader design.
+- **Interrupts and Peripherals:** NVIC, interrupt priorities, timers, DMA, and peripheral-level programming.
+- **RTOS Internals:** Task scheduling, context switching, concurrency, synchronization, and inter-task communication.
+- **Firmware Architecture:** Device drivers, hardware abstraction, debugging, and firmware update mechanisms.
 
-- How microcontrollers execute instructions.
-- ARM Cortex-M architecture and exception handling.
-- Interrupts, timers, DMA, and peripheral drivers.
-- Memory organization, stack, heap, and linker scripts.
-- RTOS scheduling and task synchronization.
-- Bootloaders and firmware update mechanisms.
-- Communication protocols and debugging techniques.
-- Embedded Linux and automotive software architecture.
-
-I am also exploring Zephyr RTOS and AUTOSAR to expand my understanding of industry-oriented embedded software development.
+I am also exploring Zephyr RTOS and automotive embedded software architectures.
 
 ## Technical Writing and Knowledge Sharing
 
@@ -163,10 +110,9 @@ I write about topics such as:
 - ARM Cortex-M internals.
 - Communication protocols.
 - RTOS concepts.
-- Hardware interfacing.
 - Firmware debugging and troubleshooting.
 
-I also publish technical articles on **[Dev.to](https://dev.to/)**, where I share practical explanations, experiments, and lessons from my engineering journey.
+I also publish technical articles on **[Dev.to](https://dev.to/amanprasad)**, where I share practical explanations, experiments, and lessons from my engineering journey.
 
 You can explore my technical articles through the Blog section of this website.
 
@@ -189,6 +135,6 @@ I enjoy connecting with people who are interested in embedded systems, electroni
 If you are working on something interesting, have a technical question, or simply want to discuss embedded engineering, feel free to connect with me.
 
 - **GitHub:** [Explore my projects](https://github.com/amanprasad2707)
-- **Dev.to:** [Read my technical articles](https://dev.to/)
-- **LinkedIn:** [Connect with me](https://www.linkedin.com/)
-- **Email:** [Get in touch](mailto:YOUR_EMAIL_ADDRESS)
+- **Dev.to:** [Read my technical articles](https://dev.to/amanprasad)
+- **LinkedIn:** [Connect with me](https://www.linkedin.com/in/amanprasad2707/)
+- **Email:** [Get in touch](mailto:aprasad2707@gmail.com)
